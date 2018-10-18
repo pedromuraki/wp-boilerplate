@@ -1,0 +1,192 @@
+/* normalize */
+@import 'node_modules/normalize.css/normalize';
+
+/* rem mixin */
+/* Baseline, measured in pixels.
+The value should be the same as the font-size value for the html element.
+If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px), then the variable below would be 10px. */
+$baseline-px: 10px;
+
+@mixin rem($property, $px-values) {
+  /* Convert the baseline into rems */
+  $baseline-rem: $baseline-px / 1rem * 1;
+  /* Print the first line in pixel values */
+  #{$property}: $px-values;
+  /* If there is only one (numeric) value, return the property/value line for it. */
+  @if type-of($px-values) == 'number' {
+    #{$property}: $px-values / $baseline-rem;
+  } @else {
+    /* Create an empty list that we can dump values into */
+    $rem-values: ();
+    @each $value in $px-values {
+      /* If the value is zero or not a number, return it */
+      @if $value == 0 or type-of($value) != 'number' {
+        $rem-values: append($rem-values, $value);
+      } @else {
+        $rem-values: append($rem-values, $value / $baseline-rem);
+      }
+    }
+    /* Return the property and its list of converted values */
+    #{$property}: $rem-values;
+  }
+}
+
+/* fluid size mixin */
+@mixin fluid-size($props, $min-size, $max-size) {
+  $min-range: 320;
+  $max-range: 1280; /* set breakpoint */
+  $rangeDiff: $max-range - $min-range;
+  $sizeDiff: $max-size - $min-size;
+  @each $prop in $props {
+    #{$prop}: calc(
+      #{$min-size}px +
+        #{$sizeDiff} *
+        ((100vw - #{$min-range}px) / #{$rangeDiff})
+    );
+    @media (max-width: #{$min-range}px) {
+      #{$prop}: #{$min-size}px;
+    }
+    @media (min-width: #{$max-range}px) {
+      #{$prop}: #{$max-size}px;
+    }
+  }
+}
+
+@mixin custom-range-fluid-size(
+  $props,
+  $min-range,
+  $max-range,
+  $min-size,
+  $max-size,
+  $size-after-min-range,
+  $size-after-max-range
+) {
+  $rangeDiff: $max-range - $min-range;
+  $sizeDiff: $max-size - $min-size;
+  @each $prop in $props {
+    #{$prop}: calc(
+      #{$min-size}px +
+        #{$sizeDiff} *
+        ((100vw - #{$min-range}px) / #{$rangeDiff})
+    );
+    @media (max-width: #{$min-range}px) {
+      #{$prop}: #{$size-after-min-range}px;
+    }
+    @media (min-width: #{$max-range}px) {
+      #{$prop}: #{$size-after-max-range}px;
+    }
+  }
+}
+
+/* fonts */
+@mixin responsive-fs($fs) {
+  @include rem(font-size, $fs - 2px);
+  @media (min-width: 576px) {
+    /* bootstrap breakpoint */
+    @include rem(font-size, $fs - 1px);
+  }
+  @media (min-width: 768px) {
+    /* bootstrap breakpoint */
+    @include rem(font-size, $fs);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Hind:400,700|Playfair+Display:400,700');
+
+@mixin hind {
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+@mixin hind-bold {
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+@mixin playfair {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+@mixin playfair-bold {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* color variables */
+$dark-gray: #2a2a2a;
+$default-gray: #757575;
+
+/* global settings & resets */
+html {
+  /* if using the rem mixin */
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+ul,
+ol {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* utils */
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.italic {
+  font-style: italic !important;
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
