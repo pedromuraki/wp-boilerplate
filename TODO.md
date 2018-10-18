@@ -1,0 +1,2 @@
+- Criar mais templates php
+- Criar readme com cheatsheet

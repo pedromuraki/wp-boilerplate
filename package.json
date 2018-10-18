@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "wp-boilerplate",
   "version": "1.0.0",
-  "description": "html, css and js boilerplate",
+  "description": "wordpress boilerplate",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --watch",
