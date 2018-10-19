@@ -24,29 +24,29 @@ $ npm i --save-dev @babel/core @babel/preset-env autoprefixer babel-loader brows
 
 ## Useful Plugins
 
-- [Advanced Custom Fields](https://br.wordpress.org/plugins/advanced-custom-fields/)
-- [ACF to REST API](https://br.wordpress.org/plugins/acf-to-rest-api/)
-- [Custom Post Type UI](https://br.wordpress.org/plugins/custom-post-type-ui/)
-- [Search Everything](https://br.wordpress.org/plugins/search-everything/)
+[Advanced Custom Fields](https://br.wordpress.org/plugins/advanced-custom-fields/)
+[ACF to REST API](https://br.wordpress.org/plugins/acf-to-rest-api/)
+[Custom Post Type UI](https://br.wordpress.org/plugins/custom-post-type-ui/)
+[Search Everything](https://br.wordpress.org/plugins/search-everything/)
 
-- [Youtube Channel](https://br.wordpress.org/plugins/youtube-channel/)
-- [SoundCloud Shortcode](https://br.wordpress.org/plugins/soundcloud-shortcode/)
-- [Mixcloud Embed](https://br.wordpress.org/plugins/mixcloud-embed/)
-- [Fluid Video Embeds](https://br.wordpress.org/plugins/fluid-video-embeds/)
-- [Re-add text underline and justify](https://br.wordpress.org/plugins/re-add-underline-justify/)
+[Youtube Channel](https://br.wordpress.org/plugins/youtube-channel/)
+[SoundCloud Shortcode](https://br.wordpress.org/plugins/soundcloud-shortcode/)
+[Mixcloud Embed](https://br.wordpress.org/plugins/mixcloud-embed/)
+[Fluid Video Embeds](https://br.wordpress.org/plugins/fluid-video-embeds/)
+[Re-add text underline and justify](https://br.wordpress.org/plugins/re-add-underline-justify/)
 
-- [Yoast SEO](https://br.wordpress.org/plugins/wordpress-seo/)
-- [Favicon by RealFaviconGenerator](https://br.wordpress.org/plugins/favicon-by-realfavicongenerator/)
-- [404 Redirection](https://br.wordpress.org/plugins/404-redirection/)
+[Yoast SEO](https://br.wordpress.org/plugins/wordpress-seo/)
+[Favicon by RealFaviconGenerator](https://br.wordpress.org/plugins/favicon-by-realfavicongenerator/)
+[404 Redirection](https://br.wordpress.org/plugins/404-redirection/)
 
-- [Contact Form 7](https://br.wordpress.org/plugins/contact-form-7/)
-- [Contact Form 7 Honeypot](https://br.wordpress.org/plugins/contact-form-7-honeypot/)
-- [WP Mail SMTP by WPForms](https://br.wordpress.org/plugins/wp-mail-smtp/)
+[Contact Form 7](https://br.wordpress.org/plugins/contact-form-7/)
+[Contact Form 7 Honeypot](https://br.wordpress.org/plugins/contact-form-7-honeypot/)
+[WP Mail SMTP by WPForms](https://br.wordpress.org/plugins/wp-mail-smtp/)
 
-- [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/)
-- [Merge + Minify + Refresh](https://br.wordpress.org/plugins/merge-minify-refresh/)
+[WP Super Cache](https://wordpress.org/plugins/wp-super-cache/)
+[Merge + Minify + Refresh](https://br.wordpress.org/plugins/merge-minify-refresh/)
 
-- [Admin Menu Editor](https://br.wordpress.org/plugins/admin-menu-editor/)
+[Admin Menu Editor](https://br.wordpress.org/plugins/admin-menu-editor/)
 
 ---
 
